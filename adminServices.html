@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Services - Admin</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            background-image: url('collage.jpg');
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 48px;
+            font-family: 'Great Vibes', cursive;
+            color: #ff4081;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 300px; 
+        }
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 50px;
+        }
+
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .icon-circle img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .admin-button, .staff-button {
+            padding: 15px 40px;
+            font-size: 20px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 300px;
+        }
+
+        .admin-button {
+            background-color: #4caf50;
+        }
+
+        .admin-button:hover {
+            background-color: #388e3c;
+            transform: translateY(-5px);
+        }
+
+        .staff-button {
+            background-color: #2196f3;
+        }
+
+        .staff-button:hover {
+            background-color: #1976d2;
+            transform: translateY(-5px);
+        }
+        .center-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="navbar">
+        <h1>Royal Salon</h1>
+    </div>
+    <div class="container">
+        <div class="center-content">
+            <div class="section">
+                <div class="icon-circle">
+                    <img src="manage-icon.jpg" alt="Manage Services Icon">
+                </div>
+                <button class="admin-button" onclick="manageServices()">Manage Services</button>
+            </div>
+            <div class="section">
+                <div class="icon-circle">
+                    <img src="staff-icon.jpg" alt="Staff Icon">
+                </div>
+                <button class="staff-button" onclick="viewStaff()">View/Add Staff</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function manageServices() {
+            window.location.href = 'manage_services.jsp';
+        }
+
+        function viewStaff() {
+            window.location.href = 'view_add_staff.jsp';
+        }
+    </script>
+
+</body>
+</html>

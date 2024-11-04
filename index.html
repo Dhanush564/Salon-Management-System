@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Salon Login & Sign Up</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('saloon1.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .login-box, .signup-box {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 0 20px;
+        }
+        h1 {
+            margin-bottom: 30px;
+        }
+        input[type="text"], input[type="password"], input[type="email"] {
+            padding: 15px;
+            margin: 10px 0;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            font-size: 16px;
+        }
+        button {
+            padding: 15px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff4081;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #e91e63;
+        }
+        .navbar {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 48px;
+            font-family: 'Great Vibes', cursive;
+            color: #ff4081;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="navbar">
+        <h1>Royal Salon</h1>
+    </div>
+
+    <div class="container">
+        <div class="login-box">
+            <h1>Hair Salon Login</h1>
+            <form action="login" method="get">
+                <input type="text" id="username" placeholder="Username" required><br>
+                <input type="password" id="password" placeholder="Password" required><br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+     
+        <div class="signup-box">
+            <h1>Sign Up</h1>
+            <form action="signup" method="post">
+                <input type="text" id="name" placeholder="Name" required><br>
+                <input type="email" id="email" placeholder="Email" required><br>
+                <input type="password" id="set-password" placeholder="Set Password" required><br>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

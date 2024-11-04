@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Booking</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .booking-box {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-bottom: 30px;
+            color: #333;
+        }
+        input[type="text"], input[type="email"], input[type="datetime-local"] {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            padding: 15px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff4081;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #e91e63;
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 48px;
+            font-family: 'Great Vibes', cursive;
+            color: #ff4081;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="navbar">
+        <h1>Royal Salon</h1>
+    </div>
+    <div class="booking-box">
+        <h1>Book a Service</h1>
+        <form action="process_booking.jsp" method="post">
+            <input type="text" id="name" name="name" placeholder="Name" required><br>
+            <input type="email" id="email" name="email" placeholder="Email" required><br>
+            <input type="datetime-local" id="bookingTime" name="bookingTime" required><br>
+            <input type="text" id="service" name="service" readonly><br>
+            <button type="submit">Book</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('service').value = localStorage.getItem('selectedService');
+    </script>
+
+</body>
+</html>

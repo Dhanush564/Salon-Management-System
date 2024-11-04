@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Services</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            background-image: url('collage.jpg');
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            font-size: 36px;
+            color: #333;
+        }
+
+        .service-button {
+            padding: 15px 40px;
+            margin: 20px;
+            font-size: 20px;
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .service-button:hover {
+            background-color: #e91e63;
+            transform: translateY(-5px);
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 48px;
+            font-family: 'Great Vibes', cursive;
+            color: #ff4081;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="navbar">
+        <h1>Royal Salon</h1>
+    </div>
+
+    <h1>Select a Service</h1>
+    <button class="service-button" onclick="bookService('Haircut')">Haircut</button>
+    <button class="service-button" onclick="bookService('Facial')">Facial</button>
+    <button class="service-button" onclick="bookService('Bride Makeup')">Bride Makeup</button>
+
+    <script>
+        function bookService(service) {
+            window.location.href = `booking.jsp?service=${service}`;
+        }
+    </script>
+
+</body>
+</html>
